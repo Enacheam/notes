@@ -5,12 +5,7 @@ import { connect } from "react-redux";
 
 
 class AddNoteButtonContainer extends Component{
-
-    constructor(props){
-        super(props);
-    }
-
-
+    
     render(){
         return  <button className="pure-button" onClick={()=> this.props.navToAddNotePage() }>Add Note</button>
     }

@@ -4,19 +4,16 @@ import { connect } from "react-redux";
 import { NoteItem } from "../../commons/note-item/note-item.component";
 
 
-class NotesPageContainer extends Component{
+class NotesPageContainer extends Component {
 
-    constructor(props){
-        super(props);
-    }
-
-    render(){
+    render() {
         const notes = this.props.notes;
-        const noteItems = notes.map((note)=>
-            <NoteItem key={note.noteId.toString()} note={note} />
-        );
 
-        if(notes.length > 0){
+        if (notes.length > 0) {
+            const noteItems = notes.map((note) =>
+                <NoteItem key={note.noteId.toString()} note={note} />
+            );
+
             return (
                 <div className="notes-container">
                     <div className="container">
@@ -32,8 +29,8 @@ class NotesPageContainer extends Component{
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
-  
+
 export const NotesPage = connect(
-    null, 
+    null,
     mapDispatchToProps
 )(NotesPageContainer);

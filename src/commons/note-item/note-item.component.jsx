@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { bindActionCreators } from 'redux';
-import { push } from 'connected-react-router';
 import { connect } from "react-redux";
+import { selectNoteForEdit } from '../../actions/edit/edit.actioncreator';
 
 class NoteItemContainer extends Component{
-
-    constructor(props){
-        super(props);
-    }
 
     render(){
         const note = this.props.note;
@@ -22,7 +18,7 @@ class NoteItemContainer extends Component{
                     </p>
                 </div>
                 <div className="column column-20">
-                    <button className="button button-clear" onClick={()=>this.props.changePage()}>Edit</button>
+                    <button className="button button-clear" onClick={()=>this.props.selectNoteForEdit(note.noteId)}>Edit</button>
                 </div>
             </div>
         );
@@ -31,7 +27,7 @@ class NoteItemContainer extends Component{
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    changePage: () => push('/edit-note')
+    selectNoteForEdit
   }, dispatch)
   
 export const NoteItem = connect(null, mapDispatchToProps)(NoteItemContainer);

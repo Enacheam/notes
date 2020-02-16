@@ -1,28 +1,25 @@
 import React, { Component } from "react";
 import { bindActionCreators } from 'redux';
-import { push } from 'connected-react-router';
 import { connect } from "react-redux";
+import { createNote } from '../../actions/add/add.actioncreator';
 import { NoteEntryForm } from '../../commons/entry-form/entry-form-component.commons';
 
 class AddNotePageContainer extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
 
     render() {
         return (
             <div>
                 <h5>Create a Note</h5>
-                <NoteEntryForm />
+                <NoteEntryForm isForEdit={false} execute={this.props.createNote} executeTitle={'ADD NOTE'} />
             </div>
         );
     }
 }
 
 
-const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({
+    createNote
+}, dispatch);
 
 export const AddNotePage = connect(
     null,

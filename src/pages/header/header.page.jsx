@@ -1,15 +1,10 @@
 import React, { Component } from "react";
 import { bindActionCreators } from 'redux';
-import { push } from 'connected-react-router';
 import { connect } from "react-redux";
 import { AddNoteButton } from "../../commons/add-button/add-button.component";
 
 
 class HeaderContainer extends Component{
-
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return (
