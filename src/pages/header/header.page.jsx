@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { AddNoteButton } from "../../commons/add-button/add-button.component";
 
 
-class HeaderContainer extends Component{
+export class HeaderContainer extends Component{
 
     render(){
         return (

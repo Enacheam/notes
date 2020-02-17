@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { NoteItem } from "../../commons/note-item/note-item.component";
 
 
-class NotesPageContainer extends Component {
+export class NotesPageContainer extends Component {
 
     render() {
         const notes = this.props.notes;

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { NoteEntryForm } from '../../commons/entry-form/entry-form-component.commons';
 import { editNote } from '../../actions/edit/edit.actioncreator';
 
-class EditNotePageContainer extends Component{
+export class EditNotePageContainer extends Component{
 
     render(){
         return (

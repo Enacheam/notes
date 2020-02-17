@@ -5,7 +5,7 @@ import { Header } from '../header/header.page';
 import { NotesPage } from "../notes/notes.page";
 import { getAllNotes } from '../../actions/get-notes/get-notes.actioncreator';
 
-class HomePageContainer extends Component{
+export class HomePageContainer extends Component{
 
     componentWillMount(){
         this.props.getAllNotes();

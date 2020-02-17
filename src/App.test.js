@@ -1,9 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import { MemoryRouter } from 'react-router';
+import { shallow } from 'enzyme';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App Component', ()=>{
+  test('Routes', () => {
+    const wrapper = shallow(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    ).dive();
+    
+    expect(wrapper.find('Route')).not.toBeUndefined();
+  });
 });
+

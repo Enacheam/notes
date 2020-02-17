@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 import { navToHomePage, navToHomePageAsync } from '../../actions/confirmation/confirmation.actioncreator';
 
-class NoteConfirmationPageContainer extends Component {
+export class NoteConfirmationPageContainer extends Component {
 
     componentDidMount(){
         this.props.navToHomePageAsync();

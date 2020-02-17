@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 import { getNoteUsingId } from '../../actions/get-notes/get-notes.actioncreator';
 
-class NoteDetails extends Component {
+export class NoteDetails extends Component {
 
     componentWillMount(){
         this.props.getNoteUsingId(this.props.noteId);
